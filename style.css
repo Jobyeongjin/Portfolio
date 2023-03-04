@@ -90,6 +90,9 @@ h3 {
     font-size: 0.95rem;
     color: #000000;
   }
+  .empty {
+    width: 0;
+  }
 }
 
 /* TOP-BUTTON */
@@ -304,8 +307,8 @@ h3 {
   }
   .slider-container,
   .slider-image {
-    width: 350px;
-    height: 350px;
+    width: 320px;
+    height: 320px;
   }
   .slider-button {
     display: none;
@@ -322,6 +325,7 @@ table tr {
   font-size: 1.125rem;
 }
 table tr td {
+  width: inherit;
   padding: 0.5rem 0;
 }
 table tr td:first-child {
@@ -344,10 +348,20 @@ table tr td:last-child:hover {
   #contact {
     text-align: center;
   }
+  table {
+    margin: 0 auto;
+  }
   table tr {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  table tr td:first-child {
+    width: 50px;
+  }
+  table tr td:last-child {
+    font-size: 0.9rem;
+    display: inline-block;
   }
 }
 
