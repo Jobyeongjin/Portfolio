@@ -48,6 +48,7 @@ h3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 .logo {
   width: 45px;
@@ -81,6 +82,14 @@ h3 {
   #header {
     padding: 0 20px;
   }
+  .logo {
+    width: 30px;
+    height: 30px;
+  }
+  .nav-item button {
+    font-size: 0.95rem;
+    color: #000000;
+  }
 }
 
 /* TOP-BUTTON */
@@ -107,6 +116,11 @@ h3 {
 .top-btn.show {
   display: flex;
 }
+@media (max-width: 600px) {
+  .top-btn {
+    right: 10%;
+  }
+}
 
 /* VISUAL */
 #visual {
@@ -119,6 +133,11 @@ h3 {
 #visual img {
   width: 300px;
   border-radius: 100%;
+}
+@media (max-width: 600px) {
+  #visual img {
+    width: 200px;
+  }
 }
 
 /* VISUAL / INTRO */
@@ -275,10 +294,21 @@ h3 {
     padding: 0 20px;
     letter-spacing: 3px;
   }
+  #project .title span {
+    background: linear-gradient(red, blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  #project .title span:hover {
+    transform: scale(1);
+  }
   .slider-container,
   .slider-image {
     width: 350px;
     height: 350px;
+  }
+  .slider-button {
+    display: none;
   }
 }
 
@@ -308,6 +338,16 @@ table tr td:last-child:hover {
 @media (max-width: 1200px) {
   #contact {
     padding: 0 20px;
+  }
+}
+@media (max-width: 600px) {
+  #contact {
+    text-align: center;
+  }
+  table tr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
