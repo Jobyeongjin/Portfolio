@@ -5,13 +5,33 @@ html {
   scroll-behavior: smooth;
 }
 body {
+  --color-black: #000;
+  --color-black-10: #00000010;
+  --color-black-30: #00000030;
+  --color-black-80: #00000080;
+  --color-white: #fff;
+  --color-white-90: #ffffff90;
+  --color-main: #698269;
+  --color-main-80: #69826980;
+  --color-accent: #b99b6b;
+  --color-gray: #b7b7b7;
+  --color-border: #d2d2d2;
+  --color-border-10: #d2d2d210;
+  background-color: var(--color-white);
+  color: var(--color-black);
   line-height: 1.4;
   cursor: default;
   font-family: 'Noto Sans KR', sans-serif;
 }
+body.dark-mode {
+  --color-black: #fff;
+  --color-black-80: #ffffff80;
+  --color-white: #000;
+  --color-border-10: #d2d2d2;
+}
 a {
   text-decoration: none;
-  color: black;
+  color: var(--color-black);
 }
 .wrapper {
   max-width: 1100px;
@@ -21,28 +41,28 @@ h2 {
   font-size: 2rem;
   font-weight: bold;
   text-transform: capitalize;
-  color: #698269;
+  color: var(--color-main);
   margin: 1rem 0;
 }
 h3 {
   font-size: 1.6rem;
   font-weight: bold;
   text-transform: capitalize;
-  color: #b99b6b;
+  color: var(--color-accent);
   margin-top: 1rem;
 }
 ::selection {
-  background: #69826980;
-  color: #fff;
+  background: var(--color-main-80);
+  color: var(--color-white);
 }
 
 /* HEADER */
 #header {
   z-index: 9;
-  box-shadow: 0 0 3px 2px #00000030;
+  box-shadow: 0 0 3px 2px var(--color-black-30);
   position: sticky;
   top: 0;
-  background-color: #ffffff98;
+  background-color: var(--color-white-90);
 }
 #header .wrapper {
   display: flex;
@@ -75,8 +95,9 @@ h3 {
 .nav-item button:hover {
   opacity: 0.55;
 }
-.empty {
-  width: 20px;
+.dark-mode-toggle-btn {
+  font-size: 1.3rem;
+  cursor: pointer;
 }
 @media (max-width: 1200px) {
   #header {
@@ -88,10 +109,7 @@ h3 {
   }
   .nav-item button {
     font-size: 0.95rem;
-    color: #000000;
-  }
-  .empty {
-    width: 0;
+    color: var(--color-black);
   }
 }
 
@@ -108,7 +126,7 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: gray;
+  color: var(--color-gray);
   cursor: pointer;
   display: none;
   transition: 500ms;
@@ -129,7 +147,7 @@ h3 {
 #visual {
   margin: 5rem;
   text-align: center;
-  height: 100vh;
+  height: 700px;
   opacity: 0;
   transition: all 5s;
 }
@@ -155,7 +173,7 @@ h3 {
   margin-top: 3rem;
   font-size: 1rem;
   font-weight: 400;
-  color: #00000080;
+  color: var(--color-black-80);
   cursor: pointer;
 }
 @keyframes upAndDown {
@@ -172,13 +190,13 @@ h3 {
 .intro-arrow {
   margin-top: 1rem;
   font-size: 1rem;
-  color: #00000080;
+  color: var(--color-black-80);
   animation: upAndDown 2s infinite;
 }
 .edu-date {
   display: block;
   font-size: 0.8rem;
-  color: #00000080;
+  color: var(--color-black-80);
 }
 /* ABOUT */
 #about {
@@ -216,7 +234,7 @@ h3 {
   letter-spacing: 6px;
 }
 #project .title {
-  color: #fff;
+  color: var(--color-white);
   position: relative;
 }
 #project .title span {
@@ -231,7 +249,7 @@ h3 {
 }
 #project .text {
   margin: 1rem;
-  color: #fff;
+  color: var(--color-white);
 }
 #project .text i {
   animation: downAndUp 2s infinite;
@@ -276,7 +294,7 @@ h3 {
   position: absolute;
   top: -10px;
   font-size: 3rem;
-  color: #fff;
+  color: var(--color-white);
   cursor: pointer;
   transition: 300ms;
 }
@@ -333,10 +351,10 @@ table tr td:first-child {
   text-transform: capitalize;
   font-weight: bold;
 }
-table tr:first-child td:last-child:hover {
+table tr:first-child td:last-child {
   text-decoration: none;
 }
-table tr td:last-child:hover {
+table tr td:last-child {
   text-decoration: underline;
 }
 @media (max-width: 1200px) {
@@ -369,5 +387,5 @@ table tr td:last-child:hover {
 #footer {
   padding: 1rem 0;
   text-align: center;
-  background-color: #00000010;
+  background-color: var(--color-black-10);
 }

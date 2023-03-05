@@ -7,6 +7,21 @@ const image0 = document.querySelector('.image0');
 const image1 = document.querySelector('.image1');
 const image2 = document.querySelector('.image2');
 
+const darkModeToggleBtn = document.querySelector('.dark-mode-toggle-btn');
+
+// dark mode
+darkModeToggleBtn.addEventListener('click', () => {
+  const body = document.querySelector('body');
+  let moonIcon = darkModeToggleBtn.querySelector('i');
+  if (body.classList.contains('dark-mode')) {
+    document.body.classList.remove('dark-mode');
+    moonIcon.classList.replace('fa-regular', 'fa-solid');
+  } else {
+    document.body.classList.add('dark-mode');
+    moonIcon.classList.replace('fa-solid', 'fa-regular');
+  }
+});
+
 // go to github
 image0.addEventListener('click', () => {
   window.open('https://github.com/Jobyeongjin/KDTFinalPJT');
