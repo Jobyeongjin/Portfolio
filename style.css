@@ -29,6 +29,12 @@ body.dark-mode {
   --color-white: #000;
   --color-border-10: #d2d2d2;
 }
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
 a {
   text-decoration: none;
   color: var(--color-black);
@@ -225,7 +231,7 @@ h3 {
 /* PROJECT */
 #project {
   margin-top: 5rem;
-  background-color: #000000;
+  background-color: #00000030;
   height: 700px;
   text-align: center;
   display: flex;
@@ -234,7 +240,7 @@ h3 {
   letter-spacing: 6px;
 }
 #project .title {
-  color: var(--color-white);
+  color: var(--color-black);
   position: relative;
 }
 #project .title span {
@@ -249,7 +255,7 @@ h3 {
 }
 #project .text {
   margin: 1rem;
-  color: var(--color-white);
+  color: var(--color-white-reverse);
 }
 #project .text i {
   animation: downAndUp 2s infinite;
@@ -294,7 +300,7 @@ h3 {
   position: absolute;
   top: -10px;
   font-size: 3rem;
-  color: var(--color-white);
+  color: var(--color-black);
   cursor: pointer;
   transition: 300ms;
 }
